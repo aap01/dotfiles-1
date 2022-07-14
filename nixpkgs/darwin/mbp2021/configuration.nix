@@ -66,6 +66,11 @@
     home = "/Users/schickling";
     shell = "${pkgs.fish}/bin/fish";
   };
+
+  users.users.alif = {
+    home = "/Users/alif";
+    shell = "${pkgs.fish}/bin/fish";
+  };
   users.users.root = {
     home = "/var/root";
     shell = "${pkgs.fish}/bin/fish";
@@ -73,32 +78,32 @@
 
 
   # TODO enable
-  # system.defaults.NSGlobalDomain = {
-  #   InitialKeyRepeat = 33; # unit is 15ms, so 500ms
-  #   KeyRepeat = 2; # unit is 15ms, so 30ms
-  #   NSDocumentSaveNewDocumentsToCloud = false;
-  # };
+  system.defaults.NSGlobalDomain = {
+    InitialKeyRepeat = 33; # unit is 15ms, so 500ms
+    KeyRepeat = 2; # unit is 15ms, so 30ms
+    NSDocumentSaveNewDocumentsToCloud = false;
+  };
 
   # TODO enable
-  # fonts = {
-  #   fontDir.enable = true;
-  #   fonts = [
-  #     (pkgs.nerdfonts.override {
-  #       fonts = [
-  #         "CascadiaCode"
-  #         "FantasqueSansMono"
-  #         "FiraCode"
-  #         "FiraMono"
-  #         "Hack" # no ligatures
-  #         "Hasklig"
-  #         "Inconsolata"
-  #         "Iosevka"
-  #         "JetBrainsMono"
-  #         "VictorMono"
-  #       ];
-  #     })
-  #   ];
-  # };
+  fonts = {
+    fontDir.enable = true;
+    fonts = [
+      (pkgs.nerdfonts.override {
+        fonts = [
+          # "CascadiaCode"
+          # "FantasqueSansMono"
+          # "FiraCode"
+          # "FiraMono"
+          # "Hack" # no ligatures
+          # "Hasklig"
+          # "Inconsolata"
+          # "Iosevka"
+          "JetBrainsMono"
+          # "VictorMono"
+        ];
+      })
+    ];
+  };
 
   system.stateVersion = 4;
 }
