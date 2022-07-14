@@ -61,6 +61,7 @@
 
   environment.shells = [ pkgs.fish ];
 
+  # TODO: your own username
   users.users.schickling = {
     home = "/Users/schickling";
     shell = "${pkgs.fish}/bin/fish";
