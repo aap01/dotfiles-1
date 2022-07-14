@@ -11,6 +11,7 @@
 
   home.homeDirectory = "/home/schickling";
   home.username = "schickling";
+  # TODO: update with your own username and homeDirectory
 
   home.stateVersion = "20.09";
 
