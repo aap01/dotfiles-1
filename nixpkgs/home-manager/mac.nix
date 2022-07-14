@@ -42,7 +42,6 @@
   # https://aregsar.com/blog/2020/turn-on-key-repeat-for-macos-text-editors/
   # automate `defaults write com.google.chrome ApplePressAndHoldEnabled -bool false`
 
-  programs.git.signing.signByDefault = true;
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "1password-cli"
