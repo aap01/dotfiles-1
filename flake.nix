@@ -39,7 +39,7 @@
       # TODO re-enable cachix across hosts
 
       homeConfigurations = {
-        mbp2021 = inputs.home-manager.lib.homeManagerConfiguration {
+        alif-mac = inputs.home-manager.lib.homeManagerConfiguration {
           pkgs = inputs.nixpkgs.legacyPackages.aarch64-darwin;
           modules = [ ./nixpkgs/home-manager/mac.nix ];
           extraSpecialArgs = { pkgsUnstable = inputs.nixpkgsUnstable.legacyPackages.aarch64-darwin; };
