@@ -9,9 +9,9 @@
     ./modules/neovim.nix
   ];
 
-  home.homeDirectory = "/home/schickling";
-  home.username = "schickling";
   # TODO: update with your own username and homeDirectory
+  home.homeDirectory = "/home/alif";
+  home.username = "alif";
 
   home.stateVersion = "20.09";
 
