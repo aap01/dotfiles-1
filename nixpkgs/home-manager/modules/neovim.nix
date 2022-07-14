@@ -8,7 +8,7 @@
       lightline-vim
       tmuxline-vim
       gruvbox
-
+      which-key-nvim
       # Tools
       nerdtree
       nerdcommenter
