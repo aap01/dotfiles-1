@@ -66,7 +66,7 @@
       };
 
       darwinConfigurations = {
-        # nix build .#darwinConfigurations.mbp2021.system
+        # TODO: run this command to launch new build
         # ./result/sw/bin/darwin-rebuild switch --flake .
         mbp2021 = darwin.lib.darwinSystem {
           system = "aarch64-darwin";
