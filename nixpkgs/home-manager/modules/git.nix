@@ -2,23 +2,24 @@
 {
   programs.git = {
     enable = true;
-    userName = "Johannes Schickling";
-    userEmail = "schickling.j@gmail.com";
+    userName = "Alif Arfab Pavle";
+    userEmail = "aap.pavel@gmail.com";
 
-    signing.key = "8E9046ABA7CA018432E4A4897D614C236B9A75E6";
+    # programs.git.signing.signByDefault = true;
+    # signing.key = "8E9046ABA7CA018432E4A4897D614C236B9A75E6";
 
-    delta = {
-      enable = true;
-      options = {
-        syntax-theme = "solarized-dark";
-        side-by-side = true;
-      };
-    };
+    # delta = {
+    #   enable = true;
+    #   options = {
+    #     syntax-theme = "solarized-dark";
+    #     side-by-side = true;
+    #   };
+    # };
 
     extraConfig = {
       pull.rebase = true;
       init.defaultBranch = "main";
-      github.user = "schickling";
+      github.user = "alif";
 
       push.autoSetupRemote = true;
 
