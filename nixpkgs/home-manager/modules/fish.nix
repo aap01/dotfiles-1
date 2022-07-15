@@ -36,7 +36,7 @@
       '';
 
       hm = ''
-        pushd ~/.config
+        pushd ~/.nixconfig
         home-manager switch --flake .#$argv[1]
         popd
       '';
