@@ -9,6 +9,10 @@
   imports = [
     # TODO remove when merged https://github.com/LnL7/nix-darwin/pull/228
     ./pam.nix
+    # ../../home-manager/mac.nix
+    # Yabai here cannot find home :(
+    # ./yabai.nix
+    ./homebrew.nix
   ];
 
   # Auto upgrade nix package and the daemon service.
@@ -55,17 +59,18 @@
 
   security.pam.enableSudoTouchIdAuth = true;
 
-  programs = {
-    fish.enable = true;
-  };
+  # programs = {
+  #   fish.enable = true;
+  # };
+  # programs.zsh.enable = true;
 
   environment.shells = [ pkgs.fish ];
 
   # TODO: your own username
-  users.users.schickling = {
-    home = "/Users/schickling";
-    shell = "${pkgs.fish}/bin/fish";
-  };
+  # users.users.schickling = {
+  #   home = "/Users/schickling";
+  #   shell = "${pkgs.fish}/bin/fish";
+  # };
 
   users.users.alif = {
     home = "/Users/alif";
@@ -76,7 +81,6 @@
     shell = "${pkgs.fish}/bin/fish";
   };
 
-
   # TODO enable
   system.defaults.NSGlobalDomain = {
     InitialKeyRepeat = 33; # unit is 15ms, so 500ms
@@ -85,25 +89,26 @@
   };
 
   # TODO enable
-  fonts = {
-    fontDir.enable = true;
-    fonts = [
-      (pkgs.nerdfonts.override {
-        fonts = [
-          # "CascadiaCode"
-          # "FantasqueSansMono"
-          # "FiraCode"
-          # "FiraMono"
-          # "Hack" # no ligatures
-          # "Hasklig"
-          # "Inconsolata"
-          # "Iosevka"
-          "JetBrainsMono"
-          # "VictorMono"
-        ];
-      })
-    ];
-  };
+  # fonts = {
+  #   fontDir.enable = true;
+  #   fonts = [
+  #     (pkgs.nerdfonts.override {
+  #       fonts = [
+  #         "CascadiaCode"
+  #         "FantasqueSansMono"
+  #         "FiraCode"
+  #         "FiraMono"
+  #         "Hack" # no ligatures
+  #         "Hasklig"
+  #         "Inconsolata"
+  #         "Iosevka"
+  #         "JetBrainsMono"
+  #         "VictorMono"
+  #         "Liga SFMono Nerd Font"
+  #       ];
+  #     })
+  #   ];
+  # };
 
   system.stateVersion = 4;
 }
