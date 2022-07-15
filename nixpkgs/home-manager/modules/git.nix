@@ -5,9 +5,10 @@
     userName = "Alif Arfab Pavle";
     userEmail = "aap.pavel@gmail.com";
 
-    # programs.git.signing.signByDefault = true;
-    # signing.key = "8E9046ABA7CA018432E4A4897D614C236B9A75E6";
-
+    signing = {
+      signByDefault = true;
+      key = "5426B20B4D142339";
+    };
     # delta = {
     #   enable = true;
     #   options = {
