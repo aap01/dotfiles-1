@@ -81,6 +81,7 @@
       darwinConfigurations = {
         # TODO: replace mbp2021 with your hostname
         # Command: nix build ."#darwinConfigurations.hostname.system"
+        # Command: nix build ."#darwinConfigurations.alif-mac.system"
         # Command: ./result/sw/bin/darwin-rebuild switch --flake ."#darwinConfigurations.hostname.system"
         alif-mac = darwin.lib.darwinSystem {
           system = "aarch64-darwin";
