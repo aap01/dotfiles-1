@@ -1,19 +1,18 @@
 { config, lib, pkgs, ... }:
-
 {
   imports = [
     ./modules/home-manager.nix
+    ./modules/alacritty/alacritty.nix
     ./modules/fish.nix
-    ./modules/common.nix
     ./modules/git.nix
     ./modules/neovim.nix
+    ./modules/zsh.nix
   ];
-
   # TODO: update with your own username and homeDirectory
-  home.homeDirectory = "/home/alif";
+  home.homeDirectory = "/Users/alif";
   home.username = "alif";
 
-  home.stateVersion = "20.09";
+  home.stateVersion = "22.05";
 
   programs.fish.interactiveShellInit = ''
     set -x SSH_AUTH_SOCK "$HOME/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh";
@@ -46,4 +45,22 @@
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "1password-cli"
   ];
+  home.sessionPath = [
+    "$HOME/go/bin"
+    "$HOME/.local/bin"
+    "$HOME/.cargo/bin"
+    "$HOME/.krew/bin"
+  ];
+  home.sessionVariables = {
+    # GO111MODULE = "on";
+    EDITOR = "lvim";
+    VISUAL = "nvim";
+  };
+  programs.zsh = {
+    initExtraBeforeCompInit = ''
+      eval "$(/opt/homebrew/bin/brew shellenv)"
+      eval "$(starship init zsh)"
+      # eval "$(which $SHELL)"
+    '';
+  };
 }
