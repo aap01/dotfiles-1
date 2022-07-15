@@ -50,7 +50,7 @@
     pigz # parallel gzip
     lz4
 
-    # docker-compose
+    docker-compose
     # Nix VSC
     rnix-lsp
     nixpkgs-fmt
