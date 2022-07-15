@@ -35,6 +35,12 @@
         end
       '';
 
+      dr = ''
+        pushd ~/.nixconfig
+        darwin-rebuild switch --flake .#$argv[1]
+        popd
+      '';
+
       hm = ''
         pushd ~/.nixconfig
         home-manager switch --flake .#$argv[1]
