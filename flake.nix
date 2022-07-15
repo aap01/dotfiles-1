@@ -39,6 +39,8 @@
       # TODO re-enable cachix across hosts
 
       homeConfigurations = {
+        # TODO: Change mbp2021 to your hostname
+        # Command: home-manager switch --flake ."#homeConfigurations.hostname"
         alif-mac = inputs.home-manager.lib.homeManagerConfiguration {
           pkgs = inputs.nixpkgs.legacyPackages.aarch64-darwin;
           modules = [ ./nixpkgs/home-manager/mac.nix ];
