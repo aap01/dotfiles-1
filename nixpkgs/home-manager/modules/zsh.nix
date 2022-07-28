@@ -51,6 +51,14 @@
 
       #source /secrets/environment.bash
 
+
+      # TODO add extra path variables
+      export PATH=/opt/homebrew/bin:$PATH
+      export PATH=/Users/alif/Documents/sdks/flutter/bin:$PATH
+      # Path to lvim
+      export PATH=$HOME/.local/bin:$PATH
+      
+      
       bindkey '^e' edit-command-line
       bindkey '^ ' autosuggest-accept
       bindkey '^k' up-line-or-search
