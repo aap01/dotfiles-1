@@ -1,12 +1,15 @@
 { config, lib, pkgs, ... }:
 {
   imports = [
+    ./modules/common.nix
     ./modules/home-manager.nix
     ./modules/alacritty/alacritty.nix
     ./modules/fish.nix
     ./modules/git.nix
     ./modules/neovim.nix
     ./modules/zsh.nix
+    ../darwin/mbp2021/yabai.nix
+    ../darwin/mbp2021/lvim.nix
   ];
   # TODO: update with your own username and homeDirectory
   home.homeDirectory = "/Users/alif";
