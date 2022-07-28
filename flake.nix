@@ -40,7 +40,7 @@
 
       homeConfigurations = {
         # TODO: Change mbp2021 to your hostname
-        # Command: home-manager switch --flake ."#homeConfigurations.hostname"
+        # Command: home-manager switch --flake ."#homeConfigurations.alif-mac"
         alif-mac = inputs.home-manager.lib.homeManagerConfiguration {
           pkgs = inputs.nixpkgs.legacyPackages.aarch64-darwin;
           modules = [
@@ -80,9 +80,7 @@
 
       darwinConfigurations = {
         # TODO: replace mbp2021 with your hostname
-        # Command: nix build ."#darwinConfigurations.hostname.system"
-        # Command: nix build ."#darwinConfigurations.alif-mac.system"
-        # Command: ./result/sw/bin/darwin-rebuild switch --flake ."#darwinConfigurations.hostname.system"
+        # Command: ./result/sw/bin/darwin-rebuild switch --flake ."#alif-mac"
         alif-mac = darwin.lib.darwinSystem {
           system = "aarch64-darwin";
           modules = [
