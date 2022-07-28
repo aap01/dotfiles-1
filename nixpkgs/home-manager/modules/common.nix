@@ -23,11 +23,11 @@
     # better du alternative
     du-dust
     ripgrep
-    graphviz
+    # graphviz
     git-crypt
 
-    httpstat
-    curlie
+    # httpstat
+    # curlie
 
     # https://github.com/sindresorhus/fkill
     nodePackages.fkill-cli
