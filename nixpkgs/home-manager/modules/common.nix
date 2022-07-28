@@ -35,6 +35,8 @@
     pkgsUnstable.youtube-dl
     speedtest-cli
 
+    nodejs
+    rustup
     yarn
     python38
     jq
@@ -42,6 +44,7 @@
     cloc
     docker
     tailscale
+    dart
 
     ran # quick local webserver (`-r [folder]`)
 
